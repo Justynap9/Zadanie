@@ -6,6 +6,7 @@ class Order:
         self.order_date = order_date
 
     def __str__(self):
-        return f'Order placed by {self.student}, order_date: {self.order_date}, borrowed books: {[str (i) for i in self.books]}. Order executed by {self.employee}'
-        
-
+        return f'Order placed by {self.student},' \
+               f'order_date: {self.order_date},' \
+               f'borrowed books: {[str (i) for i in self.books]}.' \
+               f'Order executed by {self.employee}'

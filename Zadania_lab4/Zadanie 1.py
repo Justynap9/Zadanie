@@ -4,10 +4,9 @@ class Student:
         self. marks = marks
 
     def is_passed(self) -> bool:
-        result = self.marks > 50
-        return result
+        return self.marks > 50
 
-    
+
 student1 = Student("Adam", 60)
 student2 = Student('Ola', 40)
 print(Student.is_passed(student1))
