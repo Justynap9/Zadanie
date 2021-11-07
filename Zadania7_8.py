@@ -5,7 +5,10 @@ import argparse
 
 
 class Brewery:
-    def __init__(self, id, name, brewery_type, street, address_2, address_3, city, state, county_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at):
+    def __init__(self, id, name, brewery_type, street, address_2,
+                 address_3, city, state, county_province, postal_code,
+                 country, longitude, latitude, phone,
+                 website_url, updated_at, created_at):
         self.id = id
         self.name = name
         self.brewery_type = brewery_type
@@ -25,7 +28,9 @@ class Brewery:
         self.created_at = created_at
 
     def __str__(self):
-        return f'Brewery id: {self.id}, name: {self.name} is located in {self.city}, {self.country}. Phone number: {self.phone}, website: {self.website_url}'
+        return f'Brewery id: {self.id}, name: {self.name}'\
+               f'is located in {self.city}, {self.country}.' \
+               f'Phone number: {self.phone}, website: {self.website_url}'
 
     def get_data():
         api_url = 'https://api.openbrewerydb.org/breweries'
@@ -58,7 +63,10 @@ def add_to_list(data):
         website_url = i['website_url']
         updated_at = i['updated_at']
         created_at = i['created_at']
-        obj = Brewery(id, name, brewery_type, street, address_2, address_3, city, state, county_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at)
+        obj = Brewery(id, name, brewery_type, street,
+                      address_2, address_3, city, state, county_province,
+                      postal_code, country, longitude, latitude,
+                      phone, website_url, updated_at, created_at)
         list_b.append(obj)
     return list_b
 
@@ -73,7 +81,9 @@ if __name__ == '__main__':
     parser.add_argument('--city')
     result = parser.parse_args()
     if result.city:
-        data = (requests.get(f'https://api.openbrewerydb.org/breweries?by_city={result.city}')).json()
+        data = (requests.get(
+               f'https://api.openbrewerydb.org/breweries?by_city={result.city}'
+               )).json()
     else:
         data = Brewery.get_data()
 
