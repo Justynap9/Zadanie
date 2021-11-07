@@ -1,6 +1,7 @@
-def names(lista):
-    for i in lista:
+def show_names(list1):
+    for i in list1:
         print(i)
 
-imiona = ['Kasia','Asia', 'Basia', 'Stasia', 'John']
-names(imiona)
+
+names = ['Kasia', 'Asia', 'Basia', 'Stasia', 'John']
+show_names(names)

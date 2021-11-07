@@ -1,4 +1,3 @@
-numbers2 = []
-for i in range(1,11,2):
-    numbers2.append(i)
-print(numbers2)
+for i, number in enumerate(range(10)):
+    if i % 2 == 0:
+        print(number)
