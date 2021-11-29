@@ -3,4 +3,3 @@ class Movie():
         self.movieId = movieId
         self.title = title
         self.genres = genres
-        
