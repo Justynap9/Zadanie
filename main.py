@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_restful import Api
-from lab_7.resources.movie_res import MovieRes
-from lab_7.resources.link_res import LinkRes
-from lab_7.resources.tag_res import TagRes
-from lab_7.resources.rating_res import RatingRes
+from resources.movie_res import MovieRes
+from resources.link_res import LinkRes
+from resources.tag_res import TagRes
+from resources.rating_res import RatingRes
 
 app = Flask(__name__)
 api = Api(app)
