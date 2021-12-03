@@ -5,7 +5,7 @@ from models.tag import Tag
 
 class TagRes(Resource):
     def get(self):
-        data = read_file('D:/tags.csv')
+        data = read_file('data/tags.csv')
         tag_list = []
         for tag in data[1:]:
             tag_obj = (Tag(tag.split(',')[0], tag.split(',')[1], tag.split(',')[2], tag.split(',')[3])).__dict__

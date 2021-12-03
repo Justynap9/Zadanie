@@ -5,7 +5,7 @@ from models.link import Link
 
 class LinkRes(Resource):
     def get(self):
-        data = read_file('D:/links.csv')
+        data = read_file('data/links.csv')
         link_list = []
         for link in data[1:]:
             link_obj = (Link(link.split(',')[0], link.split(',')[1], link.split(',')[2])).__dict__
