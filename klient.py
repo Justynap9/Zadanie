@@ -48,5 +48,5 @@ class Klient:
         self._miejscowosc = value
 
     def __str__(self) -> str:
-        return f'Klient: {self._imie} {self._nazwisko},' \
+        return f'{self._imie} {self._nazwisko}, ' \
                f'miejsce zamieszkania: {self._ulica} {self._miejscowosc}'

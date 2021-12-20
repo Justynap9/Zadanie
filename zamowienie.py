@@ -46,9 +46,9 @@ class Zamowienie():
         self._ilosc = value
 
     def __str__(self) -> str:
-        return f'Zamowienie id: {self._id}, klient: {self._klient},' \
-               f'produkt: {self._produkt}, magazyn{self._magazyn},' \
-               f'ilosc {self._ilosc}'
+        return f'Zamowienie id: {self._id}, klient: {self._klient}, ' \
+               f'produkty: {[str(s) for s in self._produkt]}, '\
+               f'magazyn {self._magazyn},'
 
     def wartosc(self) -> float:
         suma = 0

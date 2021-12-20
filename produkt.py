@@ -57,7 +57,7 @@ class Produkt():
         self._ilosc = value
 
     def __str__(self) -> str:
-        return f'Produkt id: {self._id}, nazwa: {self._nazwa},'\
-               f'kategoria {self._kategoria}, podkategoria:'\
-               f'{self._podkategoria},'\
-               f'cena: {self._cena}, ilosc: {self._ilosc}'
+        return f'Produkt id: {self._id}, nazwa: {self._nazwa}, '\
+               f'kategoria {self._kategoria}, podkategoria: '\
+               f'{self._podkategoria}, '\
+               f'cena: {self._cena}, stan magazynu: {self._ilosc}'

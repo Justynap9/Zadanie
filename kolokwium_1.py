@@ -18,3 +18,4 @@ zamowienie1.magazyn = magazyn1
 zamowienie1.ilosc = [2, 3]
 print(zamowienie1.wartosc())
 zamowienie1.adres()
+print(zamowienie1)

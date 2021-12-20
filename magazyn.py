@@ -48,6 +48,6 @@ class Magazyn:
         self._kod_pocztowy = value
 
     def __str__(self) -> str:
-        return f'Magazyn id: {self._id}, nazwa: {self._nazwa},' \
-               f'lokalizacja: {self._ulica} {self._miejscowosc}' \
+        return f'id: {self._id}, nazwa: {self._nazwa}, ' \
+               f'lokalizacja: {self._ulica} {self._miejscowosc} ' \
                f'{self._kod_pocztowy}'

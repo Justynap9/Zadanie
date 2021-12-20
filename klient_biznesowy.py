@@ -16,4 +16,4 @@ class KlientBiznesowy(Klient):
         self._nazwa_firmy = value
 
     def __str__(self) -> str:
-        return f'Klient id: {self._id}, nazwa firmy: {self._nazwa_firmy}'
+        return f'Nazwa firmy: {self._nazwa_firmy}'
