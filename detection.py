@@ -4,14 +4,14 @@ import imutils
 
 class Detection:
 
-    def __init__(self, args):
+    def __init__(self):
         self._hog = cv2.HOGDescriptor()
         self._hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
-        self._args = args
 
-    def detectByPathImage(self):
-        image = cv2.imread(self._args['image'])
-        output_path = self._args['output']
+    def detectByPathImage(self, args):
+        image = args['image']
+        output_path = args['output']
+        image = cv2.imread(image)
         image = imutils.resize(image, width=min(450, image.shape[1]))
         result_image = self.detect(image)
         if output_path is not None:
